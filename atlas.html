@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+<!--    <script  src="https://zh.esotericsoftware.com/files/spine-player/4.1/spine-player.js"></script>-->
+<!--    <link rel="stylesheet" href="http://esotericsoftware.com/files/spine-player/4.1/spine-player.css" />-->
+
+    <script src="./spine-player.js"></script>
+    <link rel="stylesheet" href="./spine-player.css">
+</head>
+<body>
+
+<div id="player-container" style="width: 100vw; height: 100vh;"></div>
+
+<script>
+    let s = new spine.SpinePlayer("player-container", {
+        jsonUrl: "/spine/spine/2.json",
+        atlasUrl: "/spine/spine/2.atlas",
+        showControls: true,
+        viewport: {
+            x: -750,
+            y: -750,
+            width: 1500,
+            height: 1500,
+        },
+        success: function (player) {
+            player.play()
+
+            // player.animationState.setAnimation(0, "idle-test3", true)
+            //player.animationState.setAnimation(0, "hua2",true)
+
+
+        }
+
+    })
+
+
+</script>
+</body>
+</html>
